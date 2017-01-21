@@ -14,13 +14,12 @@ import com.web.network.utils.User;
 
 public class UserAction extends BaseAction{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
+	@SuppressWarnings("unused")
 	private UserService userService;
 	
+	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
     
