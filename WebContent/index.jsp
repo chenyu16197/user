@@ -10,6 +10,6 @@
 <link  rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <body>
 <%
-response.sendRedirect("user");
+response.sendRedirect("demo");
 %>
 </html>
