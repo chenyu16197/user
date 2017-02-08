@@ -7,6 +7,6 @@ import com.web.network.pojo.Demo;
 
 public interface DemoService {
 
-	List<Demo> getList();
+	public List<Demo> getList();
 
 }

@@ -16,17 +16,19 @@ public class DemoAction extends BaseAction{
 
 	private static final long serialVersionUID = 1L;
 
-	@SuppressWarnings("unused")
-	private DemoService userService;
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		this.doPost(request, response);
+	}
 
-	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		DemoService userService = new DemoServiceImpl();
 		List<Demo> list = userService.getList();
 		request.setAttribute("list", list);
-		request.getRequestDispatcher("WEB-INF/view/index.html").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
 	}
 
 
