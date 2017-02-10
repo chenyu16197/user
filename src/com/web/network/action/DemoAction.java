@@ -11,6 +11,7 @@ import com.web.network.action.base.BaseAction;
 import com.web.network.pojo.Demo;
 import com.web.network.service.DemoService;
 import com.web.network.service.impl.DemoServiceImpl;
+import com.web.network.util.UploadUtil;
 
 public class DemoAction extends BaseAction{
 
@@ -28,6 +29,10 @@ public class DemoAction extends BaseAction{
 		DemoService userService = new DemoServiceImpl();
 		List<Demo> list = userService.getList();
 		request.setAttribute("list", list);
+	     String rootPath = this.getServletContext().getRealPath("D:\bbb");
+
+
+		UploadUtil.uploadFile(request, rootPath);
 		request.getRequestDispatcher("WEB-INF/view/index.jsp").forward(request, response);
 	}
 

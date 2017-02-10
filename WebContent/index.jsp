@@ -9,7 +9,15 @@
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 <link  rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
 <body>
-<%
+<%-- <%
 response.sendRedirect("demo");
-%>
+%> --%>
+
+<form action="demo" method="post" enctype="multipart/form-data">
+  First name: <input type="file" name="file1"><br>
+  Last name: <input type="file" name="file2"><br>
+  <input type="submit" value="提交">
+</form>
+
+
 </html>
